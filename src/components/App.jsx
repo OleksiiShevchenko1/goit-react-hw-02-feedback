@@ -10,7 +10,10 @@ export class App extends Component {
     bad: 0,
   };
 
-  // handleFeedbackCount =
+  handleFeedbackCount = feedback => {
+    this.setState(prevState => ({ [feedback]: prevState[feedback] + 1 }));
+    console.log(feedback);
+  };
 
   render() {
     return (
@@ -21,8 +24,9 @@ export class App extends Component {
             OnLeaveFeedback={this.handleFeedbackCount}
           />
         </Section>
-
-        <Statistics titlee="Statistics" />
+        <Section title="Statistics">
+          <Statistics />
+        </Section>
       </div>
     );
   }
