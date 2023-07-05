@@ -10,9 +10,8 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleFeedbackCount = 
+  // handleFeedbackCount =
 
-  
   render() {
     return (
       <div>
