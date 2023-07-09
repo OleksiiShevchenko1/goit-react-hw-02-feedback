@@ -25,6 +25,7 @@ export class App extends Component {
   };
 
   render() {
+    // console.log(this.state.good + this.state.neutral + this.state.bad);
     return (
       <div>
         <Section title="Please leave feedback">

@@ -1,19 +1,20 @@
 import React from 'react';
+import { StyledItemButtons, StyledIButtons } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, OnLeaveFeedback }) => {
   return (
-    <div>
+    <StyledItemButtons>
       {options.map((option, index) => {
         return (
-          <button
+          <StyledIButtons
             type="button"
             onClick={() => OnLeaveFeedback(option)}
             key={index}
           >
             {option}
-          </button>
+          </StyledIButtons>
         );
       })}
-    </div>
+    </StyledItemButtons>
   );
 };
