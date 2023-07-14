@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledItemButtons, StyledIButtons } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ options, OnLeaveFeedback }) => {
   return (
@@ -17,4 +18,9 @@ export const FeedbackOptions = ({ options, OnLeaveFeedback }) => {
       })}
     </StyledItemButtons>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string),
+  OnLeaveFeedback: PropTypes.func,
 };

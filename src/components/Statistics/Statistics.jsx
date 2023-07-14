@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledScoreResults } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({
   title,
@@ -21,4 +22,13 @@ export const Statistics = ({
       </StyledScoreResults>
     </div>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.func,
+  positivePercentage: PropTypes.func,
 };
